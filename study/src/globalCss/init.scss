@@ -1,7 +1,8 @@
 @import "./px2-rem";
 
 body {
-  font-size: 14px !important
+  font-size: 14px !important;
+  background-color: #f3f3f3;
 }
 li {
   list-style: none;
@@ -19,7 +20,7 @@ h1,h2,h3,h4 {
   margin: 0;
 }
 .container {
-  padding: px2-to-rem(18);
+  background-color: #f3f3f3;
 }
 .line {
   height: 1px;
@@ -29,4 +30,12 @@ h1,h2,h3,h4 {
 }
 div {
   background-image: none !important;
+}
+.w1170 {
+  width: 1170px;
+  margin: 0 auto;
+}
+.w960 {
+  width: 960px;
+  margin: 0 auto;
 }
