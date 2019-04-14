@@ -1,0 +1,32 @@
+@import "./px2-rem";
+
+body {
+  font-size: 14px !important
+}
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: #555555;
+}
+h1,h2,h3,h4 {
+  margin: 0;
+}
+.container {
+  padding: px2-to-rem(18);
+}
+.line {
+  height: 1px;
+  background-color: #ADADAD;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+div {
+  background-image: none !important;
+}
