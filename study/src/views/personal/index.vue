@@ -35,7 +35,7 @@
             <p class="right-item-top">3</p>
             <p class="right-item-bo">我的疑问</p>
           </div>
-          <div class="right-item-btn">
+          <div class="right-item-btn" @click="handleJump">
             <div class="right">
               <i class="iconfont icon-shezhi"></i>
               <span>个人设置</span>
@@ -87,6 +87,11 @@
     methods: {
       changeDesStatus () {
         this.desStatus = !this.desStatus;
+      },
+      handleJump () {
+        this.$router.push({
+          name: 'change'
+        })
       },
     },
   }

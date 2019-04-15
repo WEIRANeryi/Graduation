@@ -64,5 +64,13 @@ export default new Router({
         }
       ]
     },
+    {
+      path: '/change',
+      name: 'change',
+      meta: {
+        title: '修改个人信息'
+      },
+      component: () => import('@/views/change')
+    }
   ]
 })
