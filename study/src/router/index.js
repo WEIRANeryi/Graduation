@@ -35,7 +35,34 @@ export default new Router({
       meta: {
         title: '个人中心'
       },
-      component: () => import('@/views/personal')
+      redirect: '/personal/course',
+      component: () => import('@/views/personal'),
+      children: [
+        {
+          path: 'course',
+          name: 'course',
+          meta: {
+            title: '我的课程',
+          },
+          component: () => import('@/views/course')
+        },
+        {
+          path: 'note',
+          name: 'note',
+          meta: {
+            title: '我的笔记',
+          },
+          component: () => import('@/views/note')
+        },
+        {
+          path: 'question',
+          name: 'question',
+          meta: {
+            title: '我的疑问',
+          },
+          component: () => import('@/views/question')
+        }
+      ]
     },
   ]
 })

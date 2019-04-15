@@ -6,6 +6,8 @@ import router from './router'
 import 'normalize.css/normalize.css'//引入下载的依赖初始化样式
 import '@/globalCss/init.scss'//引入自定义的样式
 import 'mint-ui/lib/style.css'//引入mint-ui的样式
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
 

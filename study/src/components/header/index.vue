@@ -14,7 +14,7 @@
         </router-link>
       </div>
       <div class="content-right" slot="right" v-else>
-        <router-link to="#">
+        <router-link to="/personal">
           <i class="iconfont icon-personalCenter"></i>
           <span>个人中心</span>
         </router-link>

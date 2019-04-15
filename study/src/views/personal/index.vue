@@ -25,15 +25,15 @@
         <div class="top-content-right">
           <div class="study right-item">
             <p class="right-item-top">3</p>
-            <p class="right-item-bo">学习的课程</p>
+            <p class="right-item-bo">我的课程</p>
           </div>
           <div class="study right-item">
             <p class="right-item-top">3</p>
-            <p class="right-item-bo">学习的课程</p>
+            <p class="right-item-bo">我的笔记</p>
           </div>
           <div class="study right-item">
             <p class="right-item-top">3</p>
-            <p class="right-item-bo">学习的课程</p>
+            <p class="right-item-bo">我的疑问</p>
           </div>
           <div class="right-item-btn">
             <div class="right">
@@ -44,8 +44,30 @@
         </div>
       </div>
     </div>
-    <div class="content">
-      
+    <div class="content w1170">
+      <div class="content-list ">
+        <ul class="lists">
+          <li>
+            <router-link to="/personal/course">
+              <i class="iconfont icon-xuexi"></i>
+              <span>我的课程</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/personal/note">
+              <i class="iconfont icon-shenhebijijishibenxiezi"></i>
+              <span>我的笔记</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/personal/question">
+              <i class="iconfont icon-tiwen"></i>
+              <span>我的疑问</span>
+            </router-link>
+          </li>
+        </ul>
+      </div>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -154,5 +176,23 @@
       }
     }
   }
-
+  .content {
+    margin-top: 50px;
+    display: flex;
+  }
+  .lists {
+    margin-right: 50px;
+    li {
+      margin-top: 40px;
+      box-shadow: 0 12px 24px 0 rgba(28,31,33,.1);
+      padding: 20px;
+      padding-bottom: 10px;
+      .iconfont {
+        font-size: 40px;
+      }
+      span {
+        font-size: 20px;
+      }
+    }
+  }
 </style>
