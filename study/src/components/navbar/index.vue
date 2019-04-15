@@ -95,7 +95,7 @@
     .content {
       width: 384px;
       margin: 0 auto;
-      border: 1px solid #000;
+      box-shadow: 0 12px 24px 0 rgba(28,31,33,.1);
       text-align: center;
       background-color: #fff;
       margin-top: 100px;

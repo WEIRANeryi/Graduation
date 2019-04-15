@@ -29,5 +29,13 @@ export default new Router({
       },
       component: () => import('@/views/register')
     },
+    {
+      path: '/personal',
+      name: 'personal',
+      meta: {
+        title: '个人中心'
+      },
+      component: () => import('@/views/personal')
+    },
   ]
 })

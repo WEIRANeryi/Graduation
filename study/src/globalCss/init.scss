@@ -1,5 +1,13 @@
 @import "./px2-rem";
-
+* {
+  moz-user-select: -moz-none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 body {
   font-size: 14px !important;
   background-color: #f3f3f3;
@@ -28,9 +36,9 @@ h1,h2,h3,h4 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-div {
-  background-image: none !important;
-}
+//div {
+//  background-image: none !important;
+//}
 .w1170 {
   width: 1170px;
   margin: 0 auto;

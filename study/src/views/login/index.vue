@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <navbar selected="1"></navbar>
+    <navbar class="navbar" selected="1"></navbar>
   </div>
 </template>
 
@@ -15,5 +15,7 @@
 </script>
 
 <style scoped>
+  .navbar {
 
+  }
 </style>
