@@ -11,7 +11,8 @@ const user = new mongoose.Schema({
     },
     password: String,
     nickname: String,
-    sort: '' //用户分类 0代表学生 1代表教师
+    sort: String, //用户分类 0代表学生 1代表教师
+    sex: String, //用户性别 0代表男人 1代表女人
 },{versionKey: false, timestamps: {createdAt: 'createTime',
         updatedAt: 'updateTime'}});
 

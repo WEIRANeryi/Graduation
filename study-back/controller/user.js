@@ -129,8 +129,56 @@ async function getUser (req,res,next) {
     }
 } //获取用户信息方法
 
+async function changeUser(req,res,next) {
+    try {
+        const userId = req.user.userId;
+        const {avatar,phone,password,nickname,sort,sex} = req.body;
+        const userData = await userModel.findById(mongoose.Types.ObjectId(userId));
+        if (userData) {
+            let phoneStatus = validator.isMobilePhone(phone,'zh-CN');
+            if (phoneStatus) {
+                const updataData = await userModel.update({
+                    _id: mongoose.Types.ObjectId(userId)
+                },{
+                    avatar: avatar,
+                    phone: phone,
+                    password: password,
+                    nickname: nickname,
+                    sort: sort,
+                    sex: sex,
+                })
+                console.log(updataData);
+                if (updataData.ok == 1) {
+                    res.json({
+                        code: 200,
+                        msg: '修改个人信息成功'
+                    })
+                } else {
+                    res.json({
+                        code: 400,
+                        msg: '莫名的错误，请重新尝试更改'
+                    })
+                }
+            } else {
+                res.json({
+                    code: 400,
+                    msg: '输入的手机号不符合格式，请正确输入'
+                })
+            }
+        } else {
+            res.json({
+                code: 400,
+                msg: '该用户还没有注册'
+            })
+        }
+    } catch (err) {
+        next(err)
+    }
+}
+
 module.exports = {
     register,
     login,
     getUser,
+    changeUser,
 };
