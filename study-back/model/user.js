@@ -11,7 +11,8 @@ const user = new mongoose.Schema({
     },
     password: String,
     nickname: String,
+    sort: '' //用户分类 0代表学生 1代表教师
 },{versionKey: false, timestamps: {createdAt: 'createTime',
         updatedAt: 'updateTime'}});
 
-modules.exports = mongoose.model('user',user);
+module.exports = mongoose.model('user',user);

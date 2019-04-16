@@ -4,7 +4,7 @@ const userRoutes = require('./user');
 const smsCodeRoutes = require('./smsCode');
 
 
-router.use('/use',userRoutes);
+router.use('/user',userRoutes);
 router.use('/smsCode',smsCodeRoutes);
 
 module.exports = router;
