@@ -9,6 +9,7 @@ const user = new mongoose.Schema({
         type: String,
         unique: true,
     },
+    des: String,
     password: String,
     nickname: String,
     sort: String, //用户分类 0代表学生 1代表教师

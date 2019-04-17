@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd8bad58-fafc-4d84-8c19-17e99e8f5104" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/study/src/globalCss/init.scss" beforeDir="false" afterPath="$PROJECT_DIR$/study/src/globalCss/init.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/study/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study-back/model/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/study-back/model/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/study/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/study/src/views/change/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study/src/views/change/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/study/src/views/personal/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/study/src/views/personal/index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,12 +23,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/study/src/views/change/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+            <state relative-caret-position="837">
+              <caret line="120" column="93" selection-start-line="120" selection-start-column="93" selection-end-line="120" selection-end-column="93" />
               <folding>
+                <element signature="n#TabPane#0;n#Tabs#0;n#div#0;n#template#0;n#!!top" />
                 <element signature="e#846#889#0" expanded="true" />
-                <element signature="e#2001#2011#0" />
-                <element signature="e#2261#2271#0" />
+                <element signature="e#834#953#0" />
               </folding>
             </state>
           </provider>
@@ -38,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/study/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+            <state relative-caret-position="349">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="21" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -99,7 +98,6 @@
         <option value="$PROJECT_DIR$/study/src/views/register/index.vue" />
         <option value="$PROJECT_DIR$/study/src/views/login/index.vue" />
         <option value="$PROJECT_DIR$/study/src/components/navbar/index.vue" />
-        <option value="$PROJECT_DIR$/study/index.html" />
         <option value="$PROJECT_DIR$/study/src/components/header/index.vue" />
         <option value="$PROJECT_DIR$/study/src/main.js" />
         <option value="$PROJECT_DIR$/study/src/views/course/index.vue" />
@@ -114,12 +112,13 @@
         <option value="$PROJECT_DIR$/study-back/app.js" />
         <option value="$PROJECT_DIR$/study-back/controller/smsCode.js" />
         <option value="$PROJECT_DIR$/study-back/routes/index.js" />
-        <option value="$PROJECT_DIR$/study-back/model/user.js" />
         <option value="$PROJECT_DIR$/study-back/routes/user.js" />
         <option value="$PROJECT_DIR$/study-back/controller/user.js" />
         <option value="$PROJECT_DIR$/study/src/globalCss/init.scss" />
         <option value="$PROJECT_DIR$/study/src/router/index.js" />
         <option value="$PROJECT_DIR$/study/src/views/personal/index.vue" />
+        <option value="$PROJECT_DIR$/study-back/model/user.js" />
+        <option value="$PROJECT_DIR$/study/index.html" />
         <option value="$PROJECT_DIR$/study/src/views/change/index.vue" />
       </list>
     </option>
@@ -157,12 +156,6 @@
               <item name="Graduation" type="b2602c69:ProjectViewProjectNode" />
               <item name="Graduation" type="462c0819:PsiDirectoryNode" />
               <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graduation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graduation" type="462c0819:PsiDirectoryNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -171,40 +164,6 @@
               <item name="study" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="router" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graduation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graduation" type="462c0819:PsiDirectoryNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graduation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graduation" type="462c0819:PsiDirectoryNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="course" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graduation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graduation" type="462c0819:PsiDirectoryNode" />
-              <item name="study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graduation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graduation" type="462c0819:PsiDirectoryNode" />
-              <item name="study-back" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Graduation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Graduation" type="462c0819:PsiDirectoryNode" />
-              <item name="study-back" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -216,7 +175,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Project" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -262,18 +221,17 @@
       <workItem from="1555289758618" duration="22648000" />
       <workItem from="1555377310975" duration="12844000" />
       <workItem from="1555414140878" duration="1285000" />
-      <workItem from="1555461847065" duration="6527000" />
+      <workItem from="1555461847065" duration="18096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66076000" />
+    <option name="totallyTimeSpent" value="77645000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49908593" visible="true" weight="0.13224447" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49908593" visible="true" weight="0.13224447" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5009141" side_tool="true" weight="0.165786" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -285,7 +243,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4993395" visible="true" weight="0.21583514" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4993395" visible="true" weight="0.21583514" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006605" side_tool="true" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -354,13 +312,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/study/img/personal-img/temp1.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/study/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/study/src/components/field/index.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -488,13 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/study-back/model/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/study-back/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -563,10 +507,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/study-back/model/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/build/check-versions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/config/dev.env.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/config/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1352" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/config/prod.env.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/build/build.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/study/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="79" selection-start-line="5" selection-start-column="79" selection-end-line="5" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/study/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
+        <state relative-caret-position="349">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="21" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -575,12 +556,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/study/src/views/change/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+        <state relative-caret-position="837">
+          <caret line="120" column="93" selection-start-line="120" selection-start-column="93" selection-end-line="120" selection-end-column="93" />
           <folding>
+            <element signature="n#TabPane#0;n#Tabs#0;n#div#0;n#template#0;n#!!top" />
             <element signature="e#846#889#0" expanded="true" />
-            <element signature="e#2001#2011#0" />
-            <element signature="e#2261#2271#0" />
+            <element signature="e#834#953#0" />
           </folding>
         </state>
       </provider>
