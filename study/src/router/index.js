@@ -61,16 +61,17 @@ export default new Router({
             title: '我的疑问',
           },
           component: () => import('@/views/question')
+        },
+        {
+          path: 'change',
+          name: 'change',
+          meta: {
+            title: '我的信息'
+          },
+          component: () => import('@/views/change')
         }
       ]
     },
-    {
-      path: '/change',
-      name: 'change',
-      meta: {
-        title: '修改个人信息'
-      },
-      component: () => import('@/views/change')
-    }
+
   ]
 })

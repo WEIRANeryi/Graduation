@@ -27,6 +27,17 @@ a {
 h1,h2,h3,h4 {
   margin: 0;
 }
+.clear-f:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
 .container {
   background-color: #f3f3f3;
 }

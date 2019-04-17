@@ -65,6 +65,12 @@
               <span>我的疑问</span>
             </router-link>
           </li>
+          <li>
+            <router-link to="/personal/change">
+              <i class="iconfont icon-shezhi"></i>
+              <span>我的信息</span>
+            </router-link>
+          </li>
         </ul>
       </div>
       <router-view></router-view>
