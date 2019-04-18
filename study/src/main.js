@@ -10,6 +10,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 import api from '@/utils/api'
 import {fetch} from '@/utils'
+import store from '@/store'
 
 Vue.config.productionTip = false;
 Vue.prototype.$api = api;
@@ -18,6 +19,7 @@ Vue.prototype.$axios = fetch;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

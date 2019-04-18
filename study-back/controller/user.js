@@ -112,6 +112,7 @@ async function login(req,res,next) {
 async function getUser (req,res,next) {
     try {
         const userId = req.user.userId;
+        console.log(userId);
         const userData = await userModel.findById(mongoose.Types.ObjectId(userId));
         if (userData) { //判断用户是否存在
             res.json({
@@ -132,7 +133,7 @@ async function getUser (req,res,next) {
 async function changeUser(req,res,next) {
     try {
         const userId = req.user.userId;
-        const {avatar,phone,password,nickname,sort,sex} = req.body;
+        const {avatar,phone,password,nickname,sort,sex,des} = req.body;
         const userData = await userModel.findById(mongoose.Types.ObjectId(userId));
         if (userData) {
             let phoneStatus = validator.isMobilePhone(phone,'zh-CN');
@@ -146,6 +147,7 @@ async function changeUser(req,res,next) {
                     nickname: nickname,
                     sort: sort,
                     sex: sex,
+                    des: des,
                 })
                 console.log(updataData);
                 if (updataData.ok == 1) {

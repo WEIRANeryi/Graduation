@@ -36,7 +36,8 @@
       }
     },
     created() {
-      if (localStorage.getItem('token')) {
+      let token = localStorage.getItem('token');
+      if (token) {
         this.isLogin = true;
       } else {
         this.isLogin = false;

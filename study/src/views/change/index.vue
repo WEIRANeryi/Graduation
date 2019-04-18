@@ -5,7 +5,7 @@
         <div class="user-avatar clear-f">
           <span class="fl">当前头像:</span>
           <upload class="avatar-upload fl">
-            <img class="avatar-img" src="../../../img/personal-img/avatar.jpg" alt="">
+            <img class="avatar-img" :src="userData.avatar" alt="">
             <div class="avatar-bottom">
               <span>编辑头像</span>
             </div>
@@ -13,25 +13,25 @@
         </div>
         <div class="user-name user-item">
           <span>昵称：</span>
-          <Input class="inputs" placeholder="请输入你的昵称" v-model="formData.nickname"></Input>
+          <Input class="inputs" :placeholder="userData.nickname" v-model="userData.nickname"></Input>
         </div>
         <div class="user-des user-item">
           <span>个性签名：</span>
-          <Input class="inputs" placeholder="描述下自己吧" v-model="formData.des"></Input>
+          <Input class="inputs" :placeholder="userData.des" v-model="userData.des"></Input>
         </div>
         <div class="user-sort user-item">
           <span>类别：</span>
-          <Radio v-model="formData.sort" disabled label="0">学生</Radio>
-          <Radio v-model="formData.sort" disabled label="1">教师</Radio>
+          <Radio v-model="userData.sort" disabled label="0">学生</Radio>
+          <Radio v-model="userData.sort" disabled label="1">教师</Radio>
         </div>
         <div class="user-sex user-item">
           <span>性别：</span>
-          <Radio v-model="formData.sex" label="0">男</Radio>
-          <Radio v-model="formData.sex" label="1">女</Radio>
-          <Radio v-model="formData.sex" label="2">保密</Radio>
+          <Radio v-model="userData.sex" label="0">男</Radio>
+          <Radio v-model="userData.sex" label="1">女</Radio>
+          <Radio v-model="userData.sex" label="2">保密</Radio>
         </div>
         <div class="user-item">
-          <Button class="btn1" round type="primary">保存</Button>
+          <Button class="btn1" round type="primary" @click="changeUser">保存</Button>
         </div>
       </TabPane>
       <TabPane label="安全设置" class="tab-item" name="second">
@@ -62,10 +62,10 @@
           <div class="steps1 step" v-show="changes[0].isTrue">
             <div class="steps-item">
               <Input type="text" class="step-input1" placeholder="原手机号" :disabled="true"></Input>
-              <Input class="step-input2" type="text"  placeholder="请输入内容" :disabled="true"></Input>
+              <Input class="step-input2" type="text"  :placeholder="userData.phone" :disabled="true"></Input>
             </div>
             <div class="steps-item" >
-              <Input placeholder="请输入内容" class="step-input2"></Input>
+              <Input placeholder="请输入内容" v-model="changePhone" class="step-input2"></Input>
               <Button class="btn2">获取验证码</Button>
             </div>
           </div>
@@ -150,6 +150,7 @@
           sex: '',
           des: '',
         },
+        changePhone: '',
         activeName: 'first',
         active: 0,
         beforeClick: true,
@@ -193,8 +194,6 @@
           this.changes[0].isTrue = false;
           this.changes[1].isTrue = false;
           this.changes[2].isTrue = true;
-        } else {
-
         }
         this.active ++;
       },
@@ -202,8 +201,25 @@
         this.$router.push({
           name: 'personal'
         })
-      }
+      },
+      changeUser () {
+        this.$axios.post(this.$api.changeUser,this.userData).then(res => {
+          if (res.code == 200) {
+            alert("更改个人信息成功")
+          } else {
+            alert(res.msg)
+          }
+        })
+      },
     },
+    created() {
+      this.$store.dispatch('getUserData')
+    },
+    computed: {
+      userData () {
+        return this.$store.state.userData
+      }
+    }
   }
 </script>
 

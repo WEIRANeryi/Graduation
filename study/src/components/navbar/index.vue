@@ -84,7 +84,7 @@
       login () {
         this.$axios.post(this.$api.postLogin,this.formData1).then(res => {
           if (res.code == 200) {
-            localStorage.setItem('token', res.token);
+            localStorage.setItem('token', res.data.token);
             alert('登陆成功')
             setTimeout(() => {
               this.$router.push({

@@ -3,14 +3,15 @@
     <div class="top">
       <div class="top-content w1170">
         <div class="top-content-left">
-          <img src="../../../img/personal-img/avatar.jpg" class="avatar" alt="">
+          <img :src="userData.avatar" class="avatar" alt="">
           <div class="user-msg">
             <div class="user-name">
-              <span >我是用户名</span>
+              <span >{{userData.nickname}}</span>
             </div>
             <div class="user-middle">
               <div class="user-classify">
-                <span>学生</span>
+                <span v-if="userData.sort == 0">学生</span>
+                <span v-else>教师</span>
               </div>
               <div class="more" @click="changeDesStatus">
                 <i class="iconfont icon-xiangxia"></i>
@@ -18,7 +19,7 @@
               </div>
             </div>
             <div class="user-des" v-show="desStatus">
-              <span>这位同学很懒，木有签名的说～</span>
+              <span>{{userData.des}}</span>
             </div>
           </div>
         </div>
@@ -85,6 +86,7 @@
     data () {
       return {
         desStatus: false,
+        isLogin: false,
       }
     },
     components: {
@@ -100,6 +102,17 @@
         })
       },
     },
+    created() {
+      if (localStorage.getItem("token")) {
+        this.isLogin = true
+        this.$store.dispatch('getUserData')
+      }
+    },
+    computed: {
+      userData () {
+        return this.$store.state.userData
+      }
+    }
   }
 </script>
 
