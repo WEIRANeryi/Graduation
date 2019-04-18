@@ -9,12 +9,12 @@
         <TabContainerItem class="login" id='1'>
           <img src="../../../img/login/login.gif" alt="">
           <div class="user-name">
-            <field class="field" placeholder="请输入用户名">
+            <field class="field" placeholder="请输入手机号" v-model="formData1.phone">
               <i slot="icon" class="iconfont icon-UserSettings-copy"></i>
             </field>
           </div>
           <div class="user-pwd">
-            <field placeholder="请输入密码" type="password" v-model="formData.phone">
+            <field placeholder="请输入密码" type="password" v-model="formData1.password">
               <i slot="icon" class="iconfont icon-biyan"></i>
             </field>
           </div>
@@ -25,17 +25,17 @@
         <TabContainerItem class="register" id='2'>
           <img src="../../../img/login/register.gif" alt="">
           <div class="user-name user-item">
-            <field class="field" placeholder="请输入手机号">
+            <field class="field" placeholder="请输入手机号" v-model="formData2.phone">
               <i slot="icon" class="iconfont icon-UserSettings-copy"></i>
             </field>
           </div>
           <div class="user-pwd user-item">
-            <field class="field" placeholder="请输入密码" type="password" v-model="formData.password">
+            <field class="field" placeholder="请输入密码" type="password" v-model="formData2.password">
               <i slot="icon" class="iconfont icon-biyan"></i>
             </field>
           </div>
           <div class="user-identify user-item">
-            <field class="field" placeholder="请输入验证码" v-model="formData.code">
+            <field class="field" placeholder="请输入验证码" v-model="formData2.code">
               <i slot="icon" class="iconfont icon-shouji"></i>
               <Button slot="right" type="primary" class="btn3" @click="Validator">获取验证码</Button>
             </field>
@@ -67,24 +67,55 @@
     },
     data () {
       return {
-
         values: '',
-        formData: {
+        formData1: {
           phone: '',
           password: '',
-          code: ''
+        },
+        formData2: {
+          phone: '',
+          password: '',
+          code: '',
+          sort: this.values,
         },
       }
     },
     methods: {
       login () {
-
+        this.$axios.post(this.$api.postLogin,this.formData1).then(res => {
+          if (res.code == 200) {
+            localStorage.setItem('token', res.token);
+            alert('登陆成功')
+            setTimeout(() => {
+              this.$router.push({
+                name: 'index'
+              })
+            }, 1000)
+          }
+        })
       },
       register () {
-
+        this.$axios.post(this.$api.postRegister,this.formData2).then(res => {
+          if (res.code == 200) {
+            alert("注册成功");
+            setTimeout(() => {
+              this.$router.push({
+                name: 'login'
+              })
+            }, 1000)
+          } else {
+            alert(res.msg)
+          }
+        })
       },
       Validator () {
-
+        this.$axios.post(this.$api.sendCode,this.formData2).then(res => {
+          if (res.code == 200) {
+            alert("发送验证码成功");
+          } else {
+            alert(res.msg);
+          }
+        })
       },
     }
   }
@@ -133,6 +164,14 @@
   }
   .radio {
     display: flex;
+    background-image: none;
+  }
+  .radio {
+    a {
+      div{
+        background-image: none;
+      }
+    }
   }
   .btn3 {
     font-size: 15px;

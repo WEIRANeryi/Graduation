@@ -8,9 +8,12 @@ import '@/globalCss/init.scss'//引入自定义的样式
 import 'mint-ui/lib/style.css'//引入mint-ui的样式
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
+import api from '@/utils/api'
+import {fetch} from '@/utils'
 
-Vue.config.productionTip = false
-
+Vue.config.productionTip = false;
+Vue.prototype.$api = api;
+Vue.prototype.$axios = fetch;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

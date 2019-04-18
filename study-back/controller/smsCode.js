@@ -5,6 +5,7 @@ const sms = require('../utils/smsUtil');
 async function sendCode(req,res,next) {
     try {
         const { phone } = req.body;
+        console.log(phone,'phone');
         const userdata = await userModel.findOne({
             phone,
         });

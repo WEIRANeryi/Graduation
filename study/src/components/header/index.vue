@@ -34,6 +34,13 @@
       return {
         isLogin: false
       }
+    },
+    created() {
+      if (localStorage.getItem('token')) {
+        this.isLogin = true;
+      } else {
+        this.isLogin = false;
+      }
     }
   }
 </script>
