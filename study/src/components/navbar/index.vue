@@ -40,7 +40,7 @@
               <Button slot="right" type="primary" class="btn3" @click="Validator">获取验证码</Button>
             </field>
           </div>
-          <Radio class="radio" v-model="values" :options="['学生', '教师']"></Radio>
+          <Radio class="radio" v-model="sort" :options="['学生', '教师']"></Radio>
           <Button class="btn2" type="primary" @click="register">立即注册</Button>
         </TabContainerItem>
       </TabContainer>
@@ -67,7 +67,7 @@
     },
     data () {
       return {
-        values: '',
+        sort: '',
         formData1: {
           phone: '',
           password: '',
@@ -76,7 +76,7 @@
           phone: '',
           password: '',
           code: '',
-          sort: this.values,
+          sort: '',
         },
       }
     },
@@ -95,6 +95,12 @@
         })
       },
       register () {
+        if (this.sort === '学生') {
+          this.formData2.sort = 0
+        } else {
+          this.formData2.sort = 1
+        }
+        console.log(this.formData2,'formdata2');
         this.$axios.post(this.$api.postRegister,this.formData2).then(res => {
           if (res.code == 200) {
             alert("注册成功");

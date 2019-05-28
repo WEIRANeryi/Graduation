@@ -18,6 +18,7 @@
           <i class="iconfont icon-personalCenter"></i>
           <span>个人中心</span>
         </router-link>
+        <span class="logout" @click="logout">退出</span>
       </div>
     </Header>
   </div>
@@ -33,6 +34,12 @@
     data () {
       return {
         isLogin: false
+      }
+    },
+    methods: {
+      logout () {
+        this.isLogin = false;
+        localStorage.removeItem('token');
       }
     },
     created() {
@@ -69,6 +76,10 @@
           margin-left: 10px;
           margin-right: 10px;
           background-color: #555555;
+        }
+        .logout {
+          padding-left: 10px;
+          font-size: 20px;
         }
       }
 
