@@ -90,7 +90,6 @@ async function login(req,res,next) {
                         code: 400,
                         msg: '密码错误，请正确输入',
                     })
-
                 }
             } else {
                 res.json({
@@ -112,7 +111,6 @@ async function login(req,res,next) {
 async function getUser (req,res,next) {
     try {
         const userId = req.user.userId;
-        console.log(userId);
         const userData = await userModel.findById(mongoose.Types.ObjectId(userId));
         if (userData) { //判断用户是否存在
             res.json({

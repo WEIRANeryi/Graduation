@@ -60,12 +60,12 @@
               <span>我的笔记</span>
             </router-link>
           </li>
-          <li>
-            <router-link to="/personal/question">
-              <i class="iconfont icon-tiwen"></i>
-              <span>我的疑问</span>
-            </router-link>
-          </li>
+          <!--<li>-->
+            <!--<router-link to="/personal/question">-->
+              <!--<i class="iconfont icon-tiwen"></i>-->
+              <!--<span>我的疑问</span>-->
+            <!--</router-link>-->
+          <!--</li>-->
           <li>
             <router-link to="/personal/change">
               <i class="iconfont icon-shezhi"></i>

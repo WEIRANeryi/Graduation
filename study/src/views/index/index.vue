@@ -3,6 +3,7 @@
     <myHeader class="myHeader"></myHeader>
     <mySwiper class="mySwiper w1170"></mySwiper>
     <div class="content w1170">
+
       <div class="content-item ">
         <div class="item-top">
           <div class="item-top-left">
@@ -13,128 +14,113 @@
             <Button  size="small">更多</Button>
           </div>
         </div>
-        <div class="item-main">
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item1.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item2.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item3.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item4.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
+        <div class="item-main" >
+          <div @click="handleJump(item._id)" v-for="item in bookData" class="item-main-item">
+            <img :src="item.img" alt="">
+            <p>{{item.title}}</p>
+            <span>{{item.author}}</span>
+          </div>
         </div>
       </div>
-      <div class="content-item ">
-        <div class="item-top">
-          <div class="item-top-left">
-            <div class="Vertical-line"></div>
-            <span>公共必修</span>
-          </div>
-          <div class="item-top-right">
-            <Button size="small">更多</Button>
-          </div>
-        </div>
-        <div class="item-main">
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item1.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item2.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item3.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item4.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-        </div>
-      </div>
-      <div class="content-item ">
-        <div class="item-top">
-          <div class="item-top-left">
-            <div class="Vertical-line"></div>
-            <span>公共必修</span>
-          </div>
-          <div class="item-top-right">
-            <Button size="small">更多</Button>
-          </div>
-        </div>
-        <div class="item-main">
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item1.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item2.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item3.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item4.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-        </div>
-      </div>
-      <div class="content-item ">
-        <div class="item-top">
-          <div class="item-top-left">
-            <div class="Vertical-line"></div>
-            <span>公共必修</span>
-          </div>
-          <div class="item-top-right">
-            <Button size="small">更多</Button>
-          </div>
-        </div>
-        <div class="item-main">
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item1.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item2.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item3.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-          <router-link to="#" class="item-main-item">
-            <img src="../../../img/item-img/item4.jpg" alt="">
-            <p>形式与政策</p>
-            <span>李松林等</span>
-          </router-link>
-        </div>
-      </div>
+      <!--<div class="content-item ">-->
+        <!--<div class="item-top">-->
+          <!--<div class="item-top-left">-->
+            <!--<div class="Vertical-line"></div>-->
+            <!--<span>公共必修</span>-->
+          <!--</div>-->
+          <!--<div class="item-top-right">-->
+            <!--<Button size="small">更多</Button>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item-main">-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item1.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item2.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item3.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item4.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="content-item ">-->
+        <!--<div class="item-top">-->
+          <!--<div class="item-top-left">-->
+            <!--<div class="Vertical-line"></div>-->
+            <!--<span>公共必修</span>-->
+          <!--</div>-->
+          <!--<div class="item-top-right">-->
+            <!--<Button size="small">更多</Button>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item-main">-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item1.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item2.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item3.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item4.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="content-item ">-->
+        <!--<div class="item-top">-->
+          <!--<div class="item-top-left">-->
+            <!--<div class="Vertical-line"></div>-->
+            <!--<span>公共必修</span>-->
+          <!--</div>-->
+          <!--<div class="item-top-right">-->
+            <!--<Button size="small">更多</Button>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="item-main">-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item1.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item2.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item3.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+          <!--<router-link to="#" class="item-main-item">-->
+            <!--<img src="../../../img/item-img/item4.jpg" alt="">-->
+            <!--<p>形式与政策</p>-->
+            <!--<span>李松林等</span>-->
+          <!--</router-link>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
   </div>
 </template>
@@ -152,9 +138,28 @@
     },
     data () {
       return {
-
+        bookData: [],
       }
-    }
+    },
+    created() {
+      this.getBook()
+    },
+    methods: {
+      getBook () {
+        this.$axios.get(this.$api.getBook).then(res => {
+          this.bookData = res.data
+          console.log(this.bookData,'bookData');
+        })
+      },
+      handleJump (id) {
+        this.$router.push({
+          name: 'details',
+          params: {
+            id: id
+          }
+        })
+      }
+    },
   }
 </script>
 
@@ -199,6 +204,7 @@
         display: flex;
         justify-content: space-between;
         .item-main-item {
+          cursor: pointer;
           img {
             width: 226px;
             height: 149px;

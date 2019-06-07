@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header class="content">
-      <img slot="left" src="../../../img/header-img/ncst.png" class="content-img" alt="">
+      <img slot="left" src="../../../img/header-img/ncst.png" class="content-img" @click="handleJump" alt="">
       <div class="content-right" slot="right" v-if="!isLogin">
         <router-link to="/login">
           <i class="iconfont icon-denglu"></i>
@@ -14,6 +14,10 @@
         </router-link>
       </div>
       <div class="content-right" slot="right" v-else>
+        <router-link to="/post" style="margin-right: 20px">
+          <i class="iconfont icon-personalCenter"></i>
+          <span style="font-size: 18px;">笔记首页</span>
+        </router-link>
         <router-link to="/personal">
           <i class="iconfont icon-personalCenter"></i>
           <span>个人中心</span>
@@ -40,6 +44,11 @@
       logout () {
         this.isLogin = false;
         localStorage.removeItem('token');
+      },
+      handleJump () {
+        this.$router.push({
+          name: 'index'
+        })
       }
     },
     created() {
@@ -64,6 +73,7 @@
         height: 50px;
         width: auto;
         margin-left: 200px;
+        cursor: pointer;
       }
       .content-right {
         height: 30px;

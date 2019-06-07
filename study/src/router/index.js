@@ -14,6 +14,14 @@ export default new Router({
       component: () => import('@/views/index')
     },
     {
+      path: '/details/:id',
+      name: 'details',
+      meta: {
+        title: '书籍目录信息'
+      },
+      component: () => import('@/views/details')
+    },
+    {
       path: '/login',
       name: 'login',
       meta: {
@@ -72,6 +80,21 @@ export default new Router({
         }
       ]
     },
-
+    {
+      path: '/post',
+      name: 'post',
+      meta: {
+        title: '讨论区'
+      },
+      component: () => import('@/views/post')
+    },
+    {
+      path: '/comment',
+      name: 'comment',
+      meta: {
+        title: '评论'
+      },
+      component: () => import('@/views/comment')
+    },
   ]
 })

@@ -100,7 +100,6 @@
         } else {
           this.formData2.sort = 1
         }
-        console.log(this.formData2,'formdata2');
         this.$axios.post(this.$api.postRegister,this.formData2).then(res => {
           if (res.code == 200) {
             alert("注册成功");
