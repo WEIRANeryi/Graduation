@@ -10,6 +10,10 @@ const post = new mongoose.Schema({
     },
     postMsg: {
         type: String
+    },
+    commentNum: {
+        type: Number,
+        default: 0
     }
 },{versionKey:false,timestamps:{createdAt: 'createTime',updatedAt: 'updateTime'}})
 

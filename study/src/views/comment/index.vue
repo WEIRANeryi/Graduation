@@ -1,28 +1,34 @@
 <template>
   <div class="container w960">
     <div class="comment-title">
-      <span>我是笔记标题</span>
+      <span>{{this.postData.postTitle}}</span>
       <span class="postindex" @click="handleJump">笔记首页</span>
     </div>
     <div class="line"></div>
     <div class="comment-post clear-f">
       <div class="post-user">
-        <img src="../../../img/personal-img/avatar.jpg" alt="">
-        <span>用户1</span>
+        <img :src='this.posterData.avatar' alt="">
+        <span>{{this.posterData.nickname}}</span>
+        <br>
+        <span v-if="this.posterData.sort">学生</span>
+        <span v-else>教师</span>
       </div>
       <div class="post-msg">
-        我是笔记正文
+        {{this.postData.postMsg}}
       </div>
     </div>
     <div class="line2"></div>
-    <div class="comments clear-f">
-      <div class="comment-item clear-f">
+    <div class="comments clear-f" v-for="item in commentData">
+      <div class="comment-item clear-f" >
         <div class="comment-user">
-          <img src="../../../img/personal-img/avatar.jpg" alt="">
-          <span>用户1</span>
+          <img :src="item.userData.avatar" alt="">
+          <span>{{item.userData.nickname}}</span>
+          <br>
+          <span v-if="item.userData.sort">学生</span>
+          <span v-else>教师</span>
         </div>
         <div class="comment-msg">
-          我是评论正文
+          {{item.commentData.commentMsg}}
         </div>
       </div>
       <div class="line2"></div>
@@ -38,12 +44,39 @@ export default {
   components: {
     myWrite
   },
+  data: function () {
+    return {
+      postData: {},
+      posterData: {},
+      commentData: {},
+    }
+  },
   methods: {
     handleJump () {
       this.$router.push({
         name: 'post'
       })
+    },
+    getPostData (id) {
+      this.$axios.post(this.$api.getPost,{
+        Id: id
+      }).then(res => {
+        this.postData = res.data.postData[0]
+        this.posterData = res.data.userData[0]
+      })
+    },
+    getCommentData (id) {
+      this.$axios.post(this.$api.getComment,{
+        postId: id
+      }).then(res => {
+        this.commentData = res.data
+      })
     }
+  },
+  created() {
+    console.log(this.$route,'route');
+    this.getPostData(this.$route.params.id)
+    this.getCommentData(this.$route.params.id)
   }
 }
 </script>

@@ -2,68 +2,20 @@
 <div class="container">
   <myHeader />
   <div class="post-main">
-    <div class="post-item">
+    <div class="post-item" v-for="item in this.postData">
       <div class="item-left">
-        <span>30</span>
+        <span>{{item.postData.commentNum}}</span>
       </div>
-      <div class="item-mid" @click="handleJump">
-        <span>我是一条笔记</span>
+      <div class="item-mid" @click="handleJump(item.postData._id)">
+        <span>{{item.postData.postTitle}}</span>
       </div>
       <div class="item-rig">
         <i class="iconfont icon-personalCenter"></i>
-        <span>用户1</span>
-      </div>
-    </div>
-    <div class="post-item">
-      <div class="item-left">
-        <span>30</span>
-      </div>
-      <div class="item-mid" @click="handleJump">
-        <span>我是一条笔记</span>
-      </div>
-      <div class="item-rig">
-        <i class="iconfont icon-personalCenter"></i>
-        <span>用户1</span>
-      </div>
-    </div>
-    <div class="post-item">
-      <div class="item-left">
-        <span>30</span>
-      </div>
-      <div class="item-mid" @click="handleJump">
-        <span>我是一条笔记</span>
-      </div>
-      <div class="item-rig">
-        <i class="iconfont icon-personalCenter"></i>
-        <span>用户1</span>
-      </div>
-    </div>
-    <div class="post-item">
-      <div class="item-left">
-        <span>30</span>
-      </div>
-      <div class="item-mid" @click="handleJump">
-        <span>我是一条笔记</span>
-      </div>
-      <div class="item-rig">
-        <i class="iconfont icon-personalCenter"></i>
-        <span>用户1</span>
-      </div>
-    </div>
-    <div class="post-item">
-      <div class="item-left">
-        <span>30</span>
-      </div>
-      <div class="item-mid" @click="handleJump">
-        <span>我是一条笔记</span>
-      </div>
-      <div class="item-rig">
-        <i class="iconfont icon-personalCenter"></i>
-        <span>用户1</span>
+        <span>{{item.userData.nickname}}</span>
       </div>
     </div>
   </div>
-  <myWrite class="write" />
+  <myWrite class="write"/>
 </div>
 </template>
 
@@ -76,12 +28,23 @@ export default {
     myHeader,
     myWrite
   },
+  data: function () {
+    return {
+      postData: [],
+    }
+  },
   methods: {
-    handleJump () {
+    handleJump (id) {
       this.$router.push({
-        name: 'comment'
+        path: `/comment/${id}`,
       })
     },
+  },
+  created() {
+    this.$axios.get(this.$api.getAllPost).then(res => {
+      console.log(res);
+      this.postData = res.data
+    })
   }
 }
 </script>

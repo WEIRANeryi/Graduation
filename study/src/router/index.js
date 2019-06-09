@@ -89,7 +89,7 @@ export default new Router({
       component: () => import('@/views/post')
     },
     {
-      path: '/comment',
+      path: '/comment/:id',
       name: 'comment',
       meta: {
         title: '评论'
